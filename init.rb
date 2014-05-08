@@ -1,9 +1,9 @@
 Redmine::Plugin.register :new_tasks do
-  name 'New Tasks plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
+  name 'Favicon Tasks plugin'
+  author 'Ivanov E. V.'
+  description 'This is a plugin show count new task to favicon'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url ''
+  author_url 'http://country-coder.blogspot.ru/'
 end
 require 'new_tasks/view_hooks'
