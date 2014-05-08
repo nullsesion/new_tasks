@@ -1,1 +1,16 @@
 <%= javascript_include_tag "tinycon", :plugin => 'new_tasks' %>
+<script type="text/javascript" >
+ Tinycon.setOptions({
+     width: 7,
+     height: 10,
+     font: '10px arial',
+     colour: '#ffffff',
+     background: '#009A00',
+     fallback: true
+
+  });
+ 
+ $(function(){
+	Tinycon.setBubble(6);
+ });
+</script>
