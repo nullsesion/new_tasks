@@ -9,8 +9,23 @@
      fallback: true
 
   });
- 
- $(function(){
-	Tinycon.setBubble(6);
+function getRandomArbitary(min, max){
+	 return Math.random() * (max - min) + min;
+}
+
+$(function(){
+	setInterval(function(){
+		$('#ajax-indicator').unbind('ajaxSend')
+		$('#ajax-indicator').unbind('ajaxStop')
+		$.ajax({
+		  type: "GET",
+		  url:  "/tj?rnd=" + getRandomArbitary(10000, 9999999),
+		  success: function(msg){
+                     Tinycon.setBubble(msg);
+		     setupAjaxIndicator();
+		  },
+	        });
+	
+	}, 2000)
  });
 </script>
