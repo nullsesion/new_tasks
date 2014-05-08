@@ -6,3 +6,4 @@ Redmine::Plugin.register :new_tasks do
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
 end
+require 'new_tasks/view_hooks'
