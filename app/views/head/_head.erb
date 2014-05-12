@@ -20,8 +20,14 @@ $(function(){
 		$.ajax({
 		  type: "GET",
 		  url:  "/tj?rnd=" + getRandomArbitary(10000, 9999999),
+		  dataType: "json",
 		  success: function(msg){
-                     Tinycon.setBubble(msg);
+		     if (msg.length > 0){
+		       Tinycon.setBubble(msg.length);
+		     }else{
+		       Tinycon.setBubble("");
+		     }
+
 		     setupAjaxIndicator();
 		  },
 	        });
