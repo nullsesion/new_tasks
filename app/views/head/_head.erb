@@ -1,5 +1,7 @@
 <%= javascript_include_tag "tinycon", :plugin => 'new_tasks' %>
+<% if User.current.logged? %>
 <script type="text/javascript" >
+
  Tinycon.setOptions({
      width: 7,
      height: 10,
@@ -33,5 +35,7 @@ $(function(){
 	        });
 	
 	}, 2000)
- });
+});
+
 </script>
+<% end %>
